@@ -1,0 +1,11 @@
+2024-08-12 20:58:15 info: Post created
+2024-08-12 21:00:21 error: Admins only
+2024-08-12 21:01:29 error: Admins only
+2024-08-12 21:02:03 error: "password" length must be at least 8 characters long
+2024-08-12 21:02:28 error: invalid signature
+2024-08-12 21:02:47 error: email or password is incorrect
+2024-08-22 18:14:46 info: You have no spare parts yet!!
+2024-08-22 18:16:47 error: sparePart validation failed: image: Path `image` is required.
+2024-08-22 18:17:19 info: Post created
+2024-08-22 18:18:34 info: Spare Part Updated
+2024-08-22 18:18:53 info: Spare Part Updated
