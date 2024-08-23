@@ -12,6 +12,13 @@ exports.getSpareParts = async (req, res) => {
 };
 
 exports.setSparePart = async (req, res) => {
+    const existingSparePart = await SparePartModel.findOne({
+        title: req.body.title,
+    });
+    
+    if (existingSparePart)
+        return res.status(409).send("spare part already exists ");
+
     const sparePart = await SparePartModel.create({
         ...req.body,
         // user: req.user.id,
