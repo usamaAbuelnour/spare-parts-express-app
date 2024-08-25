@@ -3,6 +3,10 @@ const { hash } = require("bcrypt");
 
 const userSchema = new Schema(
     {
+        name: {
+            type: SchemaTypes.String,
+            required: true,
+        },
         email: {
             type: SchemaTypes.String,
             required: true,

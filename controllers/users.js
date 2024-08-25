@@ -8,13 +8,13 @@ const CustomError = require("../utils/CustomError.js");
 const signUp = async (req, res) => {
     await accountValidationSchema.validateAsync(req.body);
 
-    const { email, password } = req.body;
+    const { name, email, password } = req.body;
     const existingUser = await UserModel.findOne({ email });
 
     if (existingUser)
         throw new CustomError(409, "Email already exists!!")
 
-    const user = await UserModel.create({ email, password });
+    const user = await UserModel.create({ name, email, password });
     if (user) {
         res.status(201).send({
             id: user._id,
