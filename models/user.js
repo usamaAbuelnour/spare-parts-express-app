@@ -1,7 +1,7 @@
 const { model, Schema, SchemaTypes } = require("mongoose");
 const { hash } = require("bcrypt");
 
-const schema = new Schema(
+const userSchema = new Schema(
     {
         email: {
             type: SchemaTypes.String,
@@ -21,12 +21,12 @@ const schema = new Schema(
     }
 );
 
-schema.pre("save", async function () {
+userSchema.pre("save", async function () {
     if (this.isModified("password")) {
         this.password = await hash(this.password, 10);
     }
 });
 
-const Model = model("user", schema);
+const UserModel = model("user", userSchema);
 
-module.exports = Model;
+module.exports = UserModel;

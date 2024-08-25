@@ -1,7 +1,6 @@
 const { model, Schema, SchemaTypes } = require("mongoose");
-const UserModel = require("./user.js");
 
-const schema = new Schema(
+const sparePartSchema = new Schema(
     {
         title: {
             type: SchemaTypes.String,
@@ -11,19 +10,50 @@ const schema = new Schema(
             type: SchemaTypes.String,
             required: true,
         },
-        imgUrl: {
+        price: {
+            type: SchemaTypes.Number,
+            required: true,
+        },
+        quantity: {
+            type: SchemaTypes.Number,
+            required: true,
+        },
+        category: {
             type: SchemaTypes.String,
             required: true,
         },
-        user: {
-            type: SchemaTypes.ObjectId,
-            // required: true,
-            ref: "UserModel",
+        manufacturer: {
+            type: SchemaTypes.String,
+            required: true,
+        },
+        image: {
+            type: SchemaTypes.String,
+            required: true,
+        },
+        manufactureCountry: {
+            type: SchemaTypes.String,
+            required: true,
+        },
+        vehicleType: {
+            type: SchemaTypes.String,
+            required: true,
+        },
+        vehicleYear: {
+            type: SchemaTypes.String,
+            required: true,
+        },
+        vehicleMaker: {
+            type: SchemaTypes.String,
+            required: true,
+        },
+        vehicleModel: {
+            type: SchemaTypes.String,
+            required: true,
         },
     },
     { timestamps: true }
 );
 
-const Model = model("sparePart", schema);
+const SparePartModel = model("sparePart", sparePartSchema);
 
-module.exports = Model;
+module.exports = SparePartModel;

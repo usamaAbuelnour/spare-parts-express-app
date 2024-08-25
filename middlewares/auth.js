@@ -11,7 +11,7 @@ const auth = async (req, res, next) => {
     ) {
         token = req.headers.authorization.slice(7);
         try {
-            const userPayload = await jwtVerify(token, "secret");
+            const userPayload = await jwtVerify(token, process.env.JWT_SECRET);
             req.user = userPayload;
             next();
         } catch (err) {

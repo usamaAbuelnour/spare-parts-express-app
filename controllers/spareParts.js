@@ -1,7 +1,7 @@
 const logger = require("../logs/logger.js");
 const SparePartModel = require("../models/sparePart.js");
 
-exports.getSpareParts = async (req, res) => {
+exports.getSpareParts = async (_, res) => {
     // const spareParts = await SparePartModel.find({ user: req.user.id });
     const spareParts = await SparePartModel.find({});
     if (spareParts.length) res.send(spareParts);
