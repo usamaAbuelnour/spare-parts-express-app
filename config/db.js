@@ -10,6 +10,7 @@ const connectDB = async () => {
         const existingAdmin = await UserModel.findOne({ role: "admin" });
         if (!existingAdmin) {
             await UserModel.create({
+                name: "admin",
                 email: "admin@admin.com",
                 password: "12345678",
                 role: "admin",
