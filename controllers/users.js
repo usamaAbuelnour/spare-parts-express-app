@@ -15,11 +15,12 @@ const register = async (req, res) => {
         throw new CustomError(422, error.message);
     }
 
-    const { name, email, password } = req.body;
+    const { firstName, lastName, email, password } = req.body;
     const existingUser = await UserModel.findOne({ email });
 
     if (existingUser) throw new CustomError(409, "Email already exists!!");
 
+    const name = `${firstName} ${lastName}`;
     const user = await UserModel.create({ name, email, password });
     if (user) {
         res.status(201).send({

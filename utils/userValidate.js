@@ -1,7 +1,8 @@
 const Yup = require("yup");
 
 const registerValidationSchema = Yup.object().shape({
-    name: Yup.string().required("Name is a required field!!"),
+    firstName: Yup.string().required("First Name is a required field!!"),
+    lastName: Yup.string().required("Last Name is a required field!!"),
     email: Yup.string()
         .required("Email is a required field!!")
         .matches(

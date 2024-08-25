@@ -33,3 +33,6 @@
 2024-08-25 22:30:12 error: email or password is incorrect
 2024-08-25 22:30:16 error: email or password is incorrect
 2024-08-25 22:30:21 error: email or password is incorrect
+2024-08-25 22:44:04 error: Last Name is a required field!!
+2024-08-25 22:44:20 error: First Name is a required field!!
+2024-08-25 22:44:42 error: Email already exists!!
