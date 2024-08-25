@@ -1,6 +1,7 @@
 const express = require("express");
 require("express-async-errors");
-require('dotenv').config();
+require("dotenv").config();
+const cors = require("cors");
 
 const sparePartsRouter = require("./routes/spareParts.js");
 const usersRouter = require("./routes/users.js");
@@ -14,7 +15,9 @@ const port = process.env.PORT || 2000;
 
 const connectDB = require("./config/db.js");
 
+app.use(cors());
 app.use(express.json());
+app.use(express.urlencoded());
 
 connectDB();
 
