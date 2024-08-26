@@ -36,3 +36,68 @@
 2024-08-25 22:44:04 error: Last Name is a required field!!
 2024-08-25 22:44:20 error: First Name is a required field!!
 2024-08-25 22:44:42 error: Email already exists!!
+2024-08-26 11:40:42 error: email or password is incorrect
+2024-08-26 11:40:58 error: Admins are not welcome here!!
+2024-08-26 11:41:56 error: email or password is incorrect
+2024-08-26 11:42:03 error: Admins are not welcome here!!
+2024-08-26 11:42:37 error: email or password is incorrect
+2024-08-26 11:43:13 error: Normal users are not welcome here!!
+2024-08-26 11:43:48 error: email or password is incorrect
+2024-08-26 11:43:54 error: Normal users are not welcome here!!
+2024-08-26 11:44:11 error: email or password is incorrect
+2024-08-26 11:44:19 error: Normal users are not welcome here!!
+2024-08-26 11:44:24 error: email or password is incorrect
+2024-08-26 11:47:56 error: email or password is incorrect
+2024-08-26 11:48:03 error: Normal users are not welcome here!!
+2024-08-26 11:49:41 error: missing token!!
+2024-08-26 11:49:49 error: Normal users are not welcome here!!
+2024-08-26 11:52:02 error: invalid signature
+2024-08-26 11:59:31 error: sparePart validation failed: vehicleModel: Path `vehicleModel` is required.
+2024-08-26 11:59:52 info: Spare part created
+2024-08-26 12:03:35 error: sparePart validation failed: vehicleMaker: Cast to Number failed for value "Fiat" (type string) at path "vehicleMaker"
+2024-08-26 12:07:12 info: Spare part created
+2024-08-26 12:07:48 info: Spare part created
+2024-08-26 12:09:06 info: Spare part created
+2024-08-26 12:09:52 info: Spare part created
+2024-08-26 12:10:09 error: sparePart validation failed: vehicleMaker: Cast to Number failed for value "sdf" (type string) at path "vehicleMaker"
+2024-08-26 12:11:49 error: sparePart validation failed: vehicleMaker: Cast to Number failed for value "sdf" (type string) at path "vehicleMaker"
+2024-08-26 12:11:58 info: Spare part created
+2024-08-26 12:24:17 info: Spare part created
+2024-08-26 12:25:23 info: Spare part created
+2024-08-26 12:26:34 info: Spare part created
+2024-08-26 12:27:11 error: sparePart validation failed: vehicleModel: Path `vehicleModel` is required.
+2024-08-26 12:27:24 info: Spare part created
+2024-08-26 12:38:15 info: Spare part created
+2024-08-26 12:57:56 error: vehicleModel is a required field
+2024-08-26 12:59:43 error: vehicleModel is a required field
+2024-08-26 13:00:10 error: vehicleModel must be a `number` type, but the final value was: `NaN` (cast from the value `"hi"`).
+2024-08-26 13:01:02 info: Spare part created
+2024-08-26 13:02:35 error: vehicleModel must be a `number` type, but the final value was: `NaN` (cast from the value `"df"`).
+2024-08-26 13:04:21 error: sparePart validation failed: vehicleModel: Cast to Number failed for value "df" (type string) at path "vehicleModel"
+2024-08-26 13:04:41 info: Spare part created
+2024-08-26 13:05:08 error: sparePart validation failed: vehicleModel.0: Cast to [Number] failed for value "[ '555d' ]" (type string) at path "vehicleModel.0" because of "CastError"
+2024-08-26 13:07:41 error: vehicleModel must be a `number` type, but the final value was: `NaN` (cast from the value `"555d"`).
+2024-08-26 13:08:21 error: sparePart validation failed: vehicleModel: Cast to Number failed for value "555d" (type string) at path "vehicleModel"
+2024-08-26 13:08:39 error: vehicleModel must be a `number` type, but the final value was: `NaN` (cast from the value `"555d"`).
+2024-08-26 13:09:09 error: vehicleModel must be a `number` type, but the final value was: `NaN` (cast from the value `"555d"`).
+2024-08-26 13:10:36 error: hello
+2024-08-26 13:11:31 error: vehicleModel must be a `number` type, but the final value was: `NaN` (cast from the value `"555d"`).
+2024-08-26 13:11:39 error: vehicleModel is a required field
+2024-08-26 13:11:56 error: sparePart validation failed: vehicleModel: Cast to Number failed for value "555d" (type string) at path "vehicleModel"
+2024-08-26 13:13:18 error: vehicleModel must be a `number` type, but the final value was: `NaN` (cast from the value `"555d"`).
+2024-08-26 13:14:28 error: vehicleModel must be a `number` type, but the final value was: `NaN` (cast from the value `"555d"`).
+2024-08-26 13:15:13 error: vehicleModel is a required field
+2024-08-26 13:15:18 error: vehicleModel must be a `number` type, but the final value was: `NaN` (cast from the value `"555d"`).
+2024-08-26 13:15:33 error: sparePart validation failed: vehicleModel: Cast to Number failed for value "555d" (type string) at path "vehicleModel"
+2024-08-26 13:16:06 error: sparePart validation failed: vehicleModel: Cast to Number failed for value "555d" (type string) at path "vehicleModel"
+2024-08-26 13:16:58 info: Spare part created
+2024-08-26 13:36:58 error: missing token!!
+2024-08-26 13:38:40 info: Spare part Updated
+2024-08-26 13:40:34 info: Spare part Updated
+2024-08-26 13:41:00 error: Cannot read properties of undefined (reading 'length')
+2024-08-26 13:41:04 error: Cannot read properties of undefined (reading 'length')
+2024-08-26 13:41:37 info: Spare part Updated
+2024-08-26 13:43:22 error: there's no data sent!!
+2024-08-26 13:44:14 info: Spare part Updated
+2024-08-26 13:44:58 error: missing token!!
+2024-08-26 13:45:40 info: Spare part deleted

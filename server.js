@@ -4,9 +4,8 @@ require("dotenv").config();
 const cors = require("cors");
 
 const sparePartsRouter = require("./routes/spareParts.js");
-const usersRouter = require("./routes/users.js");
-const adminsRouter = require("./routes/admins.js");
-const auth = require("./middlewares/auth.js");
+const userRouter = require("./routes/user.js");
+const adminRouter = require("./routes/admin.js");
 const errorHandler = require("./middlewares/errorHandler.js");
 
 const app = express();
@@ -21,8 +20,8 @@ app.use(express.urlencoded());
 
 connectDB();
 
-app.use("/admin", adminsRouter);
-app.use(usersRouter);
+app.use("/admin", adminRouter);
+app.use(userRouter);
 app.use("/spare-parts", sparePartsRouter);
 
 app.use((_, res) => {

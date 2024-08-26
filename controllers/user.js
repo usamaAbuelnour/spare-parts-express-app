@@ -40,7 +40,14 @@ const login = async (req, res) => {
 
     const { email, password } = req.body;
     const user = await UserModel.findOne({ email });
+
+    
+
     if (user && (await bcrypt.compare(password, user.password))) {
+
+        if (user && user.role === "admin")
+            throw new CustomError(403, "Admins are not welcome here!!");
+
         res.send({
             id: user._id,
             email: user.email,
