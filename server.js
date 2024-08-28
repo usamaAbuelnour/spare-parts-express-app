@@ -14,7 +14,13 @@ const port = process.env.PORT || 2000;
 
 const connectDB = require("./config/db.js");
 
-app.use(cors());
+const corsOptions = {
+    origin: "*", 
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    credentials: true,
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded());
 
