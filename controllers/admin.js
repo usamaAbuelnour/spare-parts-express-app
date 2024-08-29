@@ -6,6 +6,7 @@ const CustomError = require("../utils/CustomError.js");
 const SparePartModel = require("../models/sparePart.js");
 const logger = require("../logs/logger.js");
 const sparePartValidationSchema = require("../utils/sparePartValidate.js");
+const OrderModel = require("../models/order.js");
 
 const login = async (req, res) => {
     try {
@@ -29,7 +30,7 @@ const login = async (req, res) => {
 
 const getSpareParts = async (_, res) => {
     const spareParts = await SparePartModel.find({});
-    if (spareParts.length) res.send(spareParts);
+    if (spareParts.length) res.status(200).send(spareParts);
     else {
         logger.info("You have no spare parts yet!!");
         res.send("You have no spare parts yet!!");
@@ -59,10 +60,11 @@ const setSparePart = async (req, res) => {
 
 const updateSparePart = async (req, res) => {
     const { id } = req.params;
-   
-    if (!Object.keys(req.body).length) throw new CustomError(422, "there's no data sent!!")
-   
-        const sparePart = await SparePartModel.findByIdAndUpdate(id, req.body, {
+
+    if (!Object.keys(req.body).length)
+        throw new CustomError(422, "there's no data sent!!");
+
+    const sparePart = await SparePartModel.findByIdAndUpdate(id, req.body, {
         new: true,
     });
     if (sparePart) {
@@ -80,10 +82,36 @@ const deleteSparePart = async (req, res) => {
     } else res.status(422).send("there's no such spare part!!");
 };
 
+const getOrders = async (_, res) => {
+    const orders = await OrderModel.find().populate("userId", 'name email');
+    if (orders.length) res.status(200).send(orders);
+    else {
+        logger.info("You have no orders yet!!");
+        res.send("You have no orders yet!!");
+    }
+};
+
+const updateOrder = async (req, res) => {
+    const { id } = req.params;
+
+    if (!Object.keys(req.body).length)
+        throw new CustomError(422, "there's no data sent!!");
+
+    const order = await OrderModel.findByIdAndUpdate(id, req.body, {
+        new: true,
+    });
+    if (order) {
+        res.send("Order updated");
+        logger.info("Order Updated");
+    } else res.status(422).send("there's no such Order!!");
+}
+
 module.exports = {
     login,
     getSpareParts,
     setSparePart,
     updateSparePart,
     deleteSparePart,
+    getOrders,
+    updateOrder
 };

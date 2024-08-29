@@ -102,3 +102,32 @@
 2024-08-26 13:44:58 error: missing token!!
 2024-08-26 13:45:40 info: Spare part deleted
 2024-08-27 18:47:11 error: Email already exists!!
+2024-08-30 00:28:27 error: logger is not defined
+2024-08-30 00:29:13 info: You have no orders yet!!
+2024-08-30 00:30:08 error: missing token!!
+2024-08-30 00:34:47 error: order validation failed: userId: Path `userId` is required.
+2024-08-30 00:35:33 error: order validation failed: userId: Path `userId` is required.
+2024-08-30 00:43:37 info: You have no orders yet!!
+2024-08-30 00:44:13 info: You have no orders yet!!
+2024-08-30 00:46:51 error: missing token!!
+2024-08-30 00:47:09 info: order deleted
+2024-08-30 00:47:14 info: You have no orders yet!!
+2024-08-30 00:51:33 info: You have no orders yet!!
+2024-08-30 00:52:30 info: You have no orders yet!!
+2024-08-30 01:04:10 error: invalid signature
+2024-08-30 01:17:53 error: OrderModel is not defined
+2024-08-30 01:18:22 error: Schema hasn't been registered for model "UserModel".
+Use mongoose.model(name, schema)
+2024-08-30 01:19:17 error: Schema hasn't been registered for model "UserModel".
+Use mongoose.model(name, schema)
+2024-08-30 01:19:32 error: Schema hasn't been registered for model "UserModel".
+Use mongoose.model(name, schema)
+2024-08-30 01:22:20 error: Schema hasn't been registered for model "UserModel".
+Use mongoose.model(name, schema)
+2024-08-30 01:24:48 error: Cannot populate path `user` because it is not in your schema. Set the `strictPopulate` option to false to override.
+2024-08-30 01:30:01 error: Schema hasn't been registered for model "UserModel".
+Use mongoose.model(name, schema)
+2024-08-30 01:50:14 error: missing token!!
+2024-08-30 01:50:31 info: Order Updated
+2024-08-30 01:51:11 info: Order Updated
+2024-08-30 01:52:47 error: Cannot use an expression items: [ { _id: false } ] in an exclusion projection

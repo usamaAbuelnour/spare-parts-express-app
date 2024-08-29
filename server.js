@@ -3,9 +3,10 @@ require("express-async-errors");
 require("dotenv").config();
 const cors = require("cors");
 
-const sparePartsRouter = require("./routes/spareParts.js");
-const userRouter = require("./routes/user.js");
 const adminRouter = require("./routes/admin.js");
+const userRouter = require("./routes/user.js");
+const sparePartsRouter = require("./routes/spareParts.js");
+const ordersRouter = require("./routes/orders.js");
 const errorHandler = require("./middlewares/errorHandler.js");
 
 const app = express();
@@ -13,9 +14,11 @@ const app = express();
 const port = process.env.PORT || 2000;
 
 const connectDB = require("./config/db.js");
+const auth = require("./middlewares/auth.js");
+const checkRole = require("./middlewares/checkRole.js");
 
 const corsOptions = {
-    origin: "*", 
+    origin: "*",
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true,
 };
@@ -29,6 +32,7 @@ connectDB();
 app.use("/admin", adminRouter);
 app.use(userRouter);
 app.use("/spare-parts", sparePartsRouter);
+app.use("/orders", auth, checkRole(["user"]), ordersRouter);
 
 app.use((_, res) => {
     res.status(404).send("page not found!!!");
