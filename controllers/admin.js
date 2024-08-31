@@ -7,6 +7,7 @@ const SparePartModel = require("../models/sparePart.js");
 const logger = require("../logs/logger.js");
 const sparePartValidationSchema = require("../utils/sparePartValidate.js");
 const OrderModel = require("../models/order.js");
+const adminOrderValidationSchema = require("../utils/orderValidate.js");
 
 const login = async (req, res) => {
     try {
@@ -39,7 +40,9 @@ const getSpareParts = async (_, res) => {
 
 const setSparePart = async (req, res) => {
     try {
-        await sparePartValidationSchema.validate(req.body);
+        await sparePartValidationSchema.validate(req.body, {
+            stripUnknown: false,
+        });
     } catch (error) {
         throw new CustomError(422, error.message);
     }
@@ -51,9 +54,7 @@ const setSparePart = async (req, res) => {
     if (existingSparePart)
         return res.status(409).send("Spare part already exists ");
 
-    const sparePart = await SparePartModel.create({
-        ...req.body,
-    });
+    const sparePart = await SparePartModel.create(req.body);
     logger.info("Spare part created");
     res.status(201).send(sparePart);
 };
@@ -83,19 +84,28 @@ const deleteSparePart = async (req, res) => {
 };
 
 const getOrders = async (_, res) => {
-    const orders = await OrderModel.find().populate("userId", 'name email');
+    const orders = await OrderModel.find({ status: "waiting" }).populate(
+        "userId",
+        "name email"
+    );
     if (orders.length) res.status(200).send(orders);
     else {
-        logger.info("You have no orders yet!!");
-        res.send("You have no orders yet!!");
+        logger.info("There're no orders yet!!");
+        res.send("There're no orders yet!!");
     }
 };
 
 const updateOrder = async (req, res) => {
-    const { id } = req.params;
+    try {
+        test = await adminOrderValidationSchema.validate(req.body, {
+            abortEarly: false,
+            stripUnknown: false,
+        });
+    } catch (error) {
+        throw new CustomError(422, error.message);
+    }
 
-    if (!Object.keys(req.body).length)
-        throw new CustomError(422, "there's no data sent!!");
+    const { id } = req.params;
 
     const order = await OrderModel.findByIdAndUpdate(id, req.body, {
         new: true,
@@ -104,7 +114,7 @@ const updateOrder = async (req, res) => {
         res.send("Order updated");
         logger.info("Order Updated");
     } else res.status(422).send("there's no such Order!!");
-}
+};
 
 module.exports = {
     login,
@@ -113,5 +123,5 @@ module.exports = {
     updateSparePart,
     deleteSparePart,
     getOrders,
-    updateOrder
+    updateOrder,
 };

@@ -7,6 +7,7 @@ const adminRouter = require("./routes/admin.js");
 const userRouter = require("./routes/user.js");
 const sparePartsRouter = require("./routes/spareParts.js");
 const ordersRouter = require("./routes/orders.js");
+const favoritePartsRouter = require("./routes/favoriteParts.js");
 const errorHandler = require("./middlewares/errorHandler.js");
 
 const app = express();
@@ -33,6 +34,7 @@ app.use("/admin", adminRouter);
 app.use(userRouter);
 app.use("/spare-parts", sparePartsRouter);
 app.use("/orders", auth, checkRole(["user"]), ordersRouter);
+app.use("/favorite-parts", auth, checkRole(["user"]), favoritePartsRouter);
 
 app.use((_, res) => {
     res.status(404).send("page not found!!!");

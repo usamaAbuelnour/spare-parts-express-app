@@ -1,6 +1,10 @@
 const { model, Schema, SchemaTypes } = require("mongoose");
 
 const itemSchema = new Schema({
+    image: {
+        type: SchemaTypes.String,
+        required: true,
+    },
     item: {
         type: SchemaTypes.String,
         required: true,

@@ -13,6 +13,6 @@ const sparePartValidationSchema = Yup.object().shape({
     vehicleYear: Yup.string().required(),
     vehicleMaker: Yup.string().required(),
     vehicleModel: Yup.string().required(),
-});
+}).noUnknown(true, 'Invalid fields detected');
 
 module.exports = sparePartValidationSchema;

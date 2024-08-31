@@ -131,3 +131,70 @@ Use mongoose.model(name, schema)
 2024-08-30 01:50:31 info: Order Updated
 2024-08-30 01:51:11 info: Order Updated
 2024-08-30 01:52:47 error: Cannot use an expression items: [ { _id: false } ] in an exclusion projection
+2024-08-31 15:15:59 error: invalid signature
+2024-08-31 15:17:10 info: You have no orders yet!!
+2024-08-31 15:19:14 info: You have no orders yet!!
+2024-08-31 15:19:30 info: You have no orders yet!!
+2024-08-31 15:19:52 info: You have no orders yet!!
+2024-08-31 15:38:38 info: Order Updated
+2024-08-31 15:39:21 error: Cannot set headers after they are sent to the client
+2024-08-31 15:40:23 info: Order Updated
+2024-08-31 15:41:15 error: status must be one of the following values: accepted, rejected
+2024-08-31 15:41:32 info: Order Updated
+2024-08-31 15:42:28 info: Order Updated
+2024-08-31 15:42:34 info: Order Updated
+2024-08-31 15:43:34 info: Order Updated
+2024-08-31 15:47:53 error: status must be one of the following values: accepted, rejected
+2024-08-31 15:48:15 info: Order Updated
+2024-08-31 15:48:28 info: Order Updated
+2024-08-31 15:48:32 error: status must be one of the following values: accepted, rejected
+2024-08-31 15:48:45 info: Order Updated
+2024-08-31 15:49:25 info: Order Updated
+2024-08-31 15:52:09 error: You should only include status field nothing more!
+2024-08-31 15:55:48 info: Order Updated
+2024-08-31 15:56:38 info: Order Updated
+2024-08-31 15:56:58 info: Order Updated
+2024-08-31 15:57:16 info: Order Updated
+2024-08-31 15:57:32 error: You should only include status field nothing more!
+2024-08-31 15:57:46 error: You should only include status field nothing more!
+2024-08-31 15:58:22 error: You should only include status field nothing more!
+2024-08-31 15:58:32 error: status must be one of the following values: accepted, rejected
+2024-08-31 15:58:52 info: Order Updated
+2024-08-31 18:10:41 error: missing token!!
+2024-08-31 18:11:35 info: You have no favorite parts yet!!
+2024-08-31 18:11:55 error: CustomError is not defined
+2024-08-31 18:12:42 error: vehicleModel is a required field
+2024-08-31 18:13:59 error: vehicleModel is a required field
+2024-08-31 18:14:29 error: 12 errors occurred
+2024-08-31 18:14:50 error: vehicleModel is a required field
+2024-08-31 18:14:54 error: vehicleModel is a required field
+2024-08-31 18:15:24 error: vehicleMaker is a required field
+2024-08-31 18:16:22 error: vehicleModel is a required field
+2024-08-31 18:18:46 error: Invalid fields detected
+2024-08-31 18:19:13 error: Invalid fields detected
+2024-08-31 18:21:56 error: SparePartModel is not defined
+2024-08-31 18:21:59 error: SparePartModel is not defined
+2024-08-31 18:22:00 error: SparePartModel is not defined
+2024-08-31 18:23:42 error: missing token!!
+2024-08-31 18:23:47 info: Part deleted
+2024-08-31 18:25:00 error: invalid signature
+2024-08-31 18:26:10 error: Email already exists!!
+2024-08-31 18:49:50 error: totalPrice is a required field
+2024-08-31 18:49:56 error: items[0].image is a required field
+2024-08-31 18:50:53 error: image is a required field
+2024-08-31 18:51:18 error: items[0].image is a required field
+2024-08-31 18:51:40 error: items[0].image must be a valid URL
+2024-08-31 18:52:32 error: items[1].image is a required field
+2024-08-31 18:54:45 error: items[1].image must be a valid URL
+2024-08-31 18:55:22 info: You have no orders yet!!
+2024-08-31 19:14:16 error: req is not defined
+2024-08-31 19:14:32 error: you must provide me the page number
+2024-08-31 19:14:58 error: You must provide me the page number
+2024-08-31 19:15:13 error: The provided page number exceeds the total page count!!
+2024-08-31 19:15:22 error: BSON field 'skip' value must be >= 0, actual value '-10'
+2024-08-31 19:16:43 error: The provided page number exceeds the total page count!!
+2024-08-31 19:16:46 error: The provided page number exceeds the total page count!!
+2024-08-31 19:18:19 error: The provided page number can't be negative or equal zero!!
+2024-08-31 19:18:25 error: The provided page number exceeds the total page count!!
+2024-08-31 19:18:30 error: You must provide me the page number
+2024-08-31 19:18:37 error: The provided page number exceeds the total page count!!
