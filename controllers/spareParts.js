@@ -3,6 +3,14 @@ const SparePartModel = require("../models/sparePart.js");
 const CustomError = require("../utils/CustomError.js");
 
 const getSpareParts = async (req, res) => {
+    const spareParts = await SparePartModel.find();
+    if (spareParts.length) res.send(spareParts);
+    else {
+        logger.info("There're no spare parts!!");
+        res.send("There're no spare parts!!");
+    }
+};
+const getPaginatedSpareParts = async (req, res) => {
     if (req.query.page !== undefined && isNaN(req.query.page))
         throw new CustomError(400, "page number must be a number!!!");
 
@@ -40,4 +48,4 @@ const getSpareParts = async (req, res) => {
     }
 };
 
-module.exports = getSpareParts;
+module.exports = { getSpareParts, getPaginatedSpareParts };

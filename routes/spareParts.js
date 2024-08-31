@@ -1,7 +1,11 @@
 const express = require("express");
 const router = express.Router();
-const getSpareParts = require("../controllers/spareParts.js");
+const {
+    getSpareParts,
+    getPaginatedSpareParts,
+} = require("../controllers/spareParts.js");
 
-router.get("/", getSpareParts);
+router.get("/all", getSpareParts);
+router.get("/paginated", getPaginatedSpareParts);
 
 module.exports = router;
