@@ -3,10 +3,10 @@ const SparePartModel = require("../models/sparePart.js");
 const CustomError = require("../utils/CustomError.js");
 
 const getSpareParts = async (req, res) => {
-    if (!req.query.page)
-        throw new CustomError(400, "You must provide me the page number");
+    if (req.query.page !== undefined && isNaN(req.query.page))
+        throw new CustomError(400, "page number must be a number!!!");
 
-    const page = Number(req.query.page);
+    const page = Number(req.query.page) || 1;
     const limit = 10;
     const skip = (page - 1) * limit;
 
@@ -26,7 +26,14 @@ const getSpareParts = async (req, res) => {
         );
 
     const spareParts = await SparePartModel.find().skip(skip).limit(limit);
-    if (spareParts.length) res.send({ spareParts, pagesCount });
+    if (spareParts.length)
+        res.send({
+            spareParts,
+            pagesCount,
+            currentPage: page,
+            prev: page > 1,
+            next: page < pagesCount,
+        });
     else {
         logger.info("There're no spare parts!!");
         res.send("There're no spare parts!!");

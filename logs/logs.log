@@ -198,3 +198,10 @@ Use mongoose.model(name, schema)
 2024-08-31 19:18:25 error: The provided page number exceeds the total page count!!
 2024-08-31 19:18:30 error: You must provide me the page number
 2024-08-31 19:18:37 error: The provided page number exceeds the total page count!!
+2024-08-31 20:23:38 error: The provided page number can't be negative or equal zero!!
+2024-08-31 20:26:15 error: page number must be a number!!!
+2024-08-31 20:26:31 error: The provided page number exceeds the total page count!!
+2024-08-31 20:26:35 error: page number must be a number!!!
+2024-08-31 20:26:41 error: page number must be a number!!!
+2024-08-31 20:29:03 error: page number must be a number!!!
+2024-08-31 20:29:08 error: The provided page number exceeds the total page count!!
